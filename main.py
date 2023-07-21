@@ -67,7 +67,8 @@ def check_answer(lives, correct_answer):  # Check answer function to check user'
             key_random_country = key      # then we assign that key from that value to key_random_country, so that way
             break                         # we can use it to check users input.
 
-    print(f"You have {lives} lives left, {correct_answer} Correct answers.")  # Shows users he lives and correct answers
+    print(f"You have {lives} li{'ves' if lives != 1 else 'fe'} left, {correct_answer} "
+          f"Correct Answe{'rs' if correct_answer != 1 else 'r'}..")  # Shows users he lives and correct answers
     guess_input = input("Guess the country of this flag: ").lower()  # Used lower to avoid any uppercase or lowercase,
 # problems which why I made the keys starting letter all lower.
     if guess_input == key_random_country:  # Checks the users input with the random key we got above in the for loop.
